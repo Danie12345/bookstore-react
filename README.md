@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
-A simple app that displays a calculator using React in a SPA. It takes advantage of the component capabilities that React offers.
+# Bookstore
+Small website that (fake) manages an online bookstore using React-Redux!
 
 
 ## Built With
@@ -10,14 +10,14 @@ A simple app that displays a calculator using React in a SPA. It takes advantage
 - Gitflow
 
 ## Live Demos
-- [Netlify](https://6298ec2ffe61260008fd9f0c--animated-otter-ba71f4.netlify.app/)
-- [Heroku](https://mathemagics-danie12345.herokuapp.com/)
+- [Netlify]()
+- [Heroku]()
 
 
 ## Getting Started
 > To get a local copy up and running follow these simple example steps.
 
-- Clone the repo with this link https://github.com/Danie12345/mathemagics.git
+- Clone the repo with this link https://github.com/Danie12345/bookstore-react.git
 
 - Create a branch to work on your features
 
@@ -35,7 +35,7 @@ A simple app that displays a calculator using React in a SPA. It takes advantage
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues](https://github.com/Danie12345/mathemagics/issues) page.
+Feel free to check the [issues](https://github.com/Danie12345/bookstore-react/issues) page.
 
 
 ## Show your support
