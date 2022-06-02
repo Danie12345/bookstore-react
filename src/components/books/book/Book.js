@@ -4,8 +4,10 @@ import { PropTypes } from 'prop-types';
 
 import './Book.css';
 
-const Book = ({ props }) => {
-  const { id, author, title } = props;
+const Book = (props) => {
+  const {
+    id, author, title, category,
+  } = props;
   return (
     <div>
       <span>
@@ -18,16 +20,20 @@ const Book = ({ props }) => {
         {author}
         {': '}
       </span>
-      <span>{title}</span>
+      <span>
+        {title}
+        {' '}
+      </span>
+      <span>{category}</span>
     </div>
   );
 };
 
 Book.propTypes = {
-  props: PropTypes.shape({}).isRequired,
   id: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
