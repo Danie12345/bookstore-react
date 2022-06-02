@@ -32,7 +32,7 @@ li {
   height: auto;
 }
 
-ul > li:nth-child(-n+2) {
+ul.navUl > li:nth-child(-n+2) {
   border-right: 1px solid black;
   padding-right: 8px;
 }
