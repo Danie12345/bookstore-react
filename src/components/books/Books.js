@@ -10,6 +10,16 @@ const Books = () => {
       author: 'Daniel',
       title: 'How to get away with mass murder',
     },
+    {
+      id: '2',
+      author: 'Arturo',
+      title: 'How To Make A Professional Resume',
+    },
+    {
+      id: '3',
+      author: 'Luis',
+      title: 'Polygons Are Old-School, Multigons Are In',
+    },
   ];
 
   return (
