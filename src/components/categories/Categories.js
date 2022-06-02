@@ -4,7 +4,7 @@ import './Categories.css';
 
 const Categories = () => (
   <>
-    <div>Categories go here</div>
+    <button type="button">Check status</button>
   </>
 );
 
