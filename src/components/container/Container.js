@@ -12,8 +12,8 @@ const Container = () => (
   <>
     <Nav />
     <Routes>
-      <Route path="/" element={<Navigate replace to="/books" />} />
-      <Route path="/books" element={<Books />} />
+      <Route path="/" element={<Navigate replace to="/store" />} />
+      <Route path="/store" element={<Books />} />
       <Route path="/categories" element={<Categories />} />
     </Routes>
   </>

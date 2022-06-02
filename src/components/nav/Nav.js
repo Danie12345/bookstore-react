@@ -7,7 +7,7 @@ const Nav = () => {
   const links = [
     {
       id: 1,
-      path: 'books',
+      path: 'store',
       text: 'Books',
     },
     {
