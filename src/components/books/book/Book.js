@@ -27,48 +27,47 @@ const Book = (props) => {
   ];
   return (
     <div className="book" id={id}>
-      {/* <span className="bookAuthor">{author}</span>
-      <span className="bookTitle">{title}</span>
-      <span className="bookCategory">{category}</span> */}
-      <div>
-        <span>{category}</span>
-        <span>{title}</span>
-        <span>{author}</span>
-        <div>
-          <ul>
+      <div className="bookStuff">
+        <div className="bookInfo">
+          <span className="bookCategory">{category}</span>
+          <span className="bookTitle">{title}</span>
+          <span className="bookAuthor">{author}</span>
+        </div>
+        <div className="bookActions">
+          <ul className="actions">
             {links && links.map((link) => (
-              <li key={link.id}>
+              <li key={link.id} className="action">
                 <a href={link.href}>{link.name}</a>
               </li>
             ))}
           </ul>
         </div>
+      </div>
+      <div>
+        <div>
+          <div className="circle-wrap">
+            <div className="circle">
+              <div className="mask full">
+                <div className="fill"> </div>
+              </div>
+              <div className="mask half">
+                <div className="fill"> </div>
+              </div>
+              <div className="inside-circle"> </div>
+            </div>
+          </div>
+          <div>
+            <span>{Math.round(Math.random() * 100)}</span>
+            <span>%</span>
+          </div>
+          <small>Completed</small>
+        </div>
         <div>
           <div>
-            <div className="circle-wrap">
-              <div className="circle">
-                <div className="mask full">
-                  <div className="fill"> </div>
-                </div>
-                <div className="mask half">
-                  <div className="fill"> </div>
-                </div>
-                <div className="inside-circle"> </div>
-              </div>
-            </div>
-            <div>
-              <span>{Math.round(Math.random() * 100)}</span>
-              <span>%</span>
-            </div>
-            <small>Completed</small>
+            <span>CURRENT CHAPTER</span>
+            <span>Chapter 17</span>
           </div>
-          <div>
-            <div>
-              <span>CURRENT CHAPTER</span>
-              <span>Chapter 17</span>
-            </div>
-            <button type="button">UPDATE PROGRESS</button>
-          </div>
+          <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
     </div>

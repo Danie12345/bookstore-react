@@ -1,0 +1,7 @@
+.bookItems {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 0% 10%;
+  gap: 24px;
+}
