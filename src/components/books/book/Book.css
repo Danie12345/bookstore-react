@@ -1,0 +1,68 @@
+.book {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  padding: 16px;
+}
+
+.circle-wrap {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 80px, 80px, 40px);
+}
+
+.circle-wrap .inside-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: white;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 7.5px;
+  margin-left: 7.5px;
+  color: #379cf6;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/* color animation */
+
+/* 3rd progress bar */
+.mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #227ded;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 1s;
+  transform: rotate(135deg);
+}
+
+@keyframes fill{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
