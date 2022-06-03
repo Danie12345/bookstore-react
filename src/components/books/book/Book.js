@@ -64,12 +64,12 @@ const Book = (props) => {
             <small className="completed">Completed</small>
           </div>
         </div>
-        <div>
-          <div>
-            <span>CURRENT CHAPTER</span>
-            <span>Chapter 17</span>
+        <div className="chapterProgress">
+          <div className="chapterSection">
+            <div className="current">CURRENT CHAPTER</div>
+            <div className="chapter">Chapter 17</div>
           </div>
-          <button type="button">UPDATE PROGRESS</button>
+          <button className="update" type="button"><span>UPDATE PROGRESS</span></button>
         </div>
       </div>
     </div>
