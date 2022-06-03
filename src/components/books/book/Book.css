@@ -4,7 +4,7 @@
   flex-direction: row;
   width: 100%;
   min-height: 140px;
-  max-height: 15%;
+  height: auto;
   justify-content: space-between;
   padding: 16px;
   width: 100%;
@@ -37,8 +37,8 @@
 }
 
 .bookTitle {
-  width: max-content;
-  height: 1.813rem;
+  width: fit-content;
+  height: auto;
   font-family: 'RobotoSlab', sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
