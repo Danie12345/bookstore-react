@@ -205,17 +205,17 @@
 }
 
 .update {
-  width: 11.5rem;
-  height: 2.063rem;
+  box-sizing: border-box;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
   border: none;
   background-color: #0290ff;
 }
 
-.update > * {
-  width: 8.938rem;
-  height: 1.125rem;
+.update > span {
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
   font-family: RobotoSlab;
   font-size: 0.813rem;
   font-weight: 300;
