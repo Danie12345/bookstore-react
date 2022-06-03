@@ -15,3 +15,49 @@
   letter-spacing: -0.18px;
   color: #888888;
 }
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 2.125rem;
+  height: 2.813rem;
+}
+
+.titleInput {
+  width: calc(1.25 * 47.428571428%);
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.titleInput::placeholder {
+  width: 4.75rem;
+  height: 1.188rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.categorySelect {
+  width: calc(1.25 * 20.357714285%);
+  height: 100%;
+}
+
+.addBookBtn {
+  box-sizing: border-box;
+  width: calc(1.25 * 13.142857142%);
+  height: 100%;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: white;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+}

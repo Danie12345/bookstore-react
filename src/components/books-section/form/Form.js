@@ -6,10 +6,8 @@ const Form = () => (
   <div>
     <form className="formBookAdd">
       <h3>ADD NEW BOOK</h3>
-      <div>
-        <label className="inputTitle" htmlFor="text">
-          <input id="title" name="title" type="text" placeholder="Title" />
-        </label>
+      <div className="inputs">
+        <input className="titleInput" id="title" name="title" type="text" placeholder="Book title" />
         <select className="categorySelect" defaultValue="">
           <option value="" disabled hidden>Category</option>
           <option value="adventure">adventure</option>
