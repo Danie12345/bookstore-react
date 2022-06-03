@@ -3,10 +3,12 @@ import React from 'react';
 import Books from './books/Books';
 import Form from './form/Form';
 
+import './BooksSection.css';
+
 const BooksSection = () => (
-  <div>
+  <div className="booksSection">
     <Books />
-    <hr className="divideSection" />
+    <div className="divideSection" />
     <Form />
   </div>
 );
