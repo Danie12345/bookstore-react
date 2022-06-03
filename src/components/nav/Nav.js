@@ -24,7 +24,7 @@ const Nav = () => {
         {links.map((link) => (
           <li key={link.id}>
             <NavLink to={link.path}>
-              {link.text}
+              <span>{link.text.toUpperCase()}</span>
             </NavLink>
           </li>
         ))}
