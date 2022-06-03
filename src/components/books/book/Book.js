@@ -48,12 +48,12 @@ const Book = (props) => {
           <div className="circle-wrap">
             <div className="circle">
               <div className="mask full">
-                <div className="fill"> </div>
+                <div className="fill" />
               </div>
               <div className="mask half">
-                <div className="fill"> </div>
+                <div className="fill" />
               </div>
-              <div className="inside-circle"> </div>
+              <div className="inside-circle" />
             </div>
           </div>
           <div className="number">
@@ -64,6 +64,7 @@ const Book = (props) => {
             <small className="completed">Completed</small>
           </div>
         </div>
+        <div className="vl" />
         <div className="chapterProgress">
           <div className="chapterSection">
             <div className="current">CURRENT CHAPTER</div>

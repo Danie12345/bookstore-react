@@ -84,6 +84,13 @@
   padding-left: 0%;
 }
 
+.vl {
+  background-color: rgba(190, 190, 190, 0.562);
+  height: 60px;
+  width: 1px;
+  align-self: center;
+}
+
 .bookProgress {
   width: 50%;
   display: flex;
