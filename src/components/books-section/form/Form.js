@@ -7,8 +7,8 @@ const Form = () => (
       <label className="inputTitle" htmlFor="text">
         <input id="title" name="title" type="text" placeholder="Title" />
       </label>
-      <select className="categorySelect">
-        <option value="" disabled selected hidden>Category</option>
+      <select className="categorySelect" defaultValue="">
+        <option value="" disabled hidden>Category</option>
         <option value="adventure">adventure</option>
         <option value="maths">maths</option>
         <option value="violence">violence</option>
