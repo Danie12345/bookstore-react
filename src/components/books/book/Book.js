@@ -43,8 +43,8 @@ const Book = (props) => {
           </ul>
         </div>
       </div>
-      <div>
-        <div>
+      <div className="bookProgress">
+        <div className="completion">
           <div className="circle-wrap">
             <div className="circle">
               <div className="mask full">
@@ -56,11 +56,13 @@ const Book = (props) => {
               <div className="inside-circle"> </div>
             </div>
           </div>
-          <div>
-            <span>{Math.round(Math.random() * 100)}</span>
-            <span>%</span>
+          <div className="number">
+            <div className="percentage">
+              <span>{Math.round(Math.random() * 100)}</span>
+              <span>%</span>
+            </div>
+            <small className="completed">Completed</small>
           </div>
-          <small>Completed</small>
         </div>
         <div>
           <div>
