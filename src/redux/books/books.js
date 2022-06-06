@@ -1,6 +1,6 @@
 // Actions
-const ADD_BOOK = 'ADD_BOOK';
-const REM_BOOK = 'REM_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const defaultState = [];
 
 // Reducer
@@ -11,7 +11,7 @@ export default function reducer(state = defaultState, action = {}) {
         ...state,
         action.payload,
       ];
-    case REM_BOOK:
+    case REMOVE_BOOK:
       return [
         state.filter((item) => item !== action.payload),
       ];
@@ -26,5 +26,5 @@ export function addBook(obj) {
 }
 
 export function removeBook(obj) {
-  return { type: ADD_BOOK, payload: obj };
+  return { type: REMOVE_BOOK, payload: obj };
 }
