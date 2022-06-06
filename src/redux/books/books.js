@@ -4,21 +4,21 @@ const REM_BOOK = 'REM_BOOK';
 const defaultState = [];
 
 // Reducer
-export default reducer = (state = defaultState, action = {}) => {
+export default function reducer(state = defaultState, action = {}) {
   switch (action.type) {
     case ADD_BOOK:
       return [
         ...state,
-        action.payload
+        action.payload,
       ];
     case REM_BOOK:
       return [
-        state.filter((item) => item !== action.payload)
+        state.filter((item) => item !== action.payload),
       ];
     default:
       return state;
   }
-};
+}
 
 // Action Creators
 export function addBook(obj) {

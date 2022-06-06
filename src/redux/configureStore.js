@@ -1,11 +1,11 @@
 import { configureStore, combineReducers } from 'redux';
 
-const booksReducer = required('./books/books.js');
-const categoriesReducer = required('./categories/categories.js');
+import booksReducer from './books/books';
+import categoriesReducer from './categories/categories';
 
 const reducer = combineReducers({
-  booksReducer,
-  categoriesReducer
+  book: booksReducer,
+  categories: categoriesReducer,
 });
 
 const store = (initialState) => configureStore(reducer, initialState);
