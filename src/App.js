@@ -1,13 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Container from './components/container/Container';
+import store from './redux/configureStore';
 
 const App = () => (
-  <React.StrictMode>
+  <Provider store={store}>
     <Router basename={process.env.PUBLIC_URL}>
       <Container />
     </Router>
-  </React.StrictMode>
+  </Provider>
 );
 
 export default App;
