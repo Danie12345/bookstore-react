@@ -24,7 +24,11 @@ const Book = (props) => {
       id: 2,
       href: '#',
       name: 'Remove',
-      dispatch: () => { dispatch(removeBook(id)); },
+      dispatch: () => {
+        dispatch(removeBook(
+          { id },
+        ));
+      },
     },
     {
       id: 3,
