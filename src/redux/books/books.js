@@ -1,7 +1,26 @@
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-const defaultState = [];
+const defaultState = [
+  {
+    id: '1',
+    author: 'Daniel',
+    title: 'How to get away with mass murder',
+    category: 'adventure',
+  },
+  {
+    id: '2',
+    author: 'Arturo',
+    title: 'How To Make A Professional Resume',
+    category: 'adventure',
+  },
+  {
+    id: '3',
+    author: 'Luis',
+    title: 'Polygons Are Old-School, Multigons Are In',
+    category: 'maths',
+  },
+];
 
 // Reducer
 export default function reducer(state = defaultState, action = {}) {
@@ -12,9 +31,7 @@ export default function reducer(state = defaultState, action = {}) {
         action.payload,
       ];
     case REMOVE_BOOK:
-      return [
-        state.filter((item) => item !== action.payload),
-      ];
+      return state.filter((item) => item.id !== action.payload.id);
     default:
       return state;
   }

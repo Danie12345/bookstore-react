@@ -1,5 +1,5 @@
 // Actions
-const CHECK_STATUS = 'bookstore/books/CHECK_STATUS';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 const defaultState = [];
 
 // Reducer
