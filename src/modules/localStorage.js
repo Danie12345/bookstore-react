@@ -33,7 +33,6 @@ class LocalStorage {
     } else {
       this.appId = localStorage.getItem(this.endPointKey);
     }
-    console.log(this.appId);
   }
 }
 
