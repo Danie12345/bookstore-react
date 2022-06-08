@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { v4 as uuidv4 } from 'uuid';
 
-import { useDispatch } from 'react-redux';
 import { addBook } from '../../../redux/books/books';
 
 import './Form.css';
 
 const Form = () => {
+  const dispatch = useDispatch();
   const newBook = () => ({
-    title: '', author: '', id: uuidv4(), category: 'amaze',
+    title: '', author: '', item_id: uuidv4(), category: 'amaze',
   });
   const [book, setBook] = useState(newBook());
-  const dispatch = useDispatch();
 
   const changeTitle = (title) => {
     setBook({
@@ -35,7 +35,7 @@ const Form = () => {
   const submit = () => {
     if (book.title === '') return;
     if (book.author === '') return;
-    dispatch(addBook(book));
+    addBook(book)(dispatch);
     cleanBook();
   };
 
