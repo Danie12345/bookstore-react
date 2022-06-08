@@ -1,27 +1,24 @@
 import http from '../http-common';
 
-const getAll = () => http.get('/tutorials');
+import {
+  appsEndpoint, appIdEndpoint, itemIdEndpoint, booksEndpoint,
+} from '../modules/endpoints';
 
-const get = (id) => http.get(`/tutorials/${id}`);
+const createApp = () => http.post(appsEndpoint);
 
-const create = (data) => http.post('/tutorials', data);
+const createBook = (id) => http.post(appsEndpoint + appIdEndpoint(id) + booksEndpoint);
 
-const update = (id, data) => http.put(`/tutorials/${id}`, data);
+const getBooks = (id) => http.get(appsEndpoint + appIdEndpoint(id) + booksEndpoint);
 
-const remove = (id) => http.delete(`/tutorials/${id}`);
+const deleteBook = (appId, bookId) => http.delete(
+  appsEndpoint + appIdEndpoint(appId) + booksEndpoint + itemIdEndpoint(bookId),
+);
 
-const removeAll = () => http.delete('/tutorials');
-
-const findByTitle = (title) => http.get(`/tutorials?title=${title}`);
-
-const TutorialService = {
-  getAll,
-  get,
-  create,
-  update,
-  remove,
-  removeAll,
-  findByTitle,
+const BookstoreService = {
+  createApp,
+  createBook,
+  getBooks,
+  deleteBook,
 };
 
-export default TutorialService;
+export default BookstoreService;
