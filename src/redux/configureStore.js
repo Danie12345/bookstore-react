@@ -1,6 +1,8 @@
-import { combineReducers, applyMiddleware, legacy_createStore as createStore } from '@reduxjs/toolkit';
+import { combineReducers, legacy_createStore as createStore } from '@reduxjs/toolkit';
 
 import thunk from 'redux-thunk';
+
+import { applyMiddleware } from 'redux';
 
 import booksReducer from './books/books';
 import categoriesReducer from './categories/categories';
