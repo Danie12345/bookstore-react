@@ -4,6 +4,7 @@ import './index.css';
 import { Provider } from 'react-redux';
 import store from './redux/configureStore';
 import App from './App';
+import storage from './modules/localStorage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,3 +12,5 @@ root.render(
     <App />
   </Provider>,
 );
+
+storage.getLocal();
