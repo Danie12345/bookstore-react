@@ -1,7 +1,5 @@
 import { baseURL } from './endpoints';
 
-import BookstoreService from '../services/BookstoreService';
-
 class LocalStorage {
   constructor(url, key) {
     this.baseUrl = url;
@@ -17,9 +15,9 @@ class LocalStorage {
     return this.appId;
   }
 
-  createApp() {
-    BookstoreService.createApp().then(
-      (result) => { this.appId = result.data; this.setLocal(); }
+  createApp(method) {
+    method().then(
+      (result) => { this.appId = result.data; this.setLocal(); },
     );
   }
 
@@ -27,9 +25,9 @@ class LocalStorage {
     localStorage.setItem(this.endPointKey, this.appId);
   }
 
-  getLocal() {
+  getLocal(method) {
     if (localStorage.getItem(this.endPointKey) === null) {
-      this.createApp();
+      this.createApp(method);
     } else {
       this.appId = localStorage.getItem(this.endPointKey);
     }
