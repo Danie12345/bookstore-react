@@ -6,12 +6,12 @@ import {
 
 const createApp = () => http.post(appsEndpoint);
 
-const createBook = (id) => http.post(appsEndpoint + appIdEndpoint(id) + booksEndpoint);
+const createBook = (data) => http.post(`${appsEndpoint}${appIdEndpoint}${booksEndpoint}`, data);
 
-const getBooks = (id) => http.get(appsEndpoint + appIdEndpoint(id) + booksEndpoint);
+const getBooks = () => http.get(`${appsEndpoint}${appIdEndpoint}${booksEndpoint}`);
 
-const deleteBook = (appId, bookId) => http.delete(
-  appsEndpoint + appIdEndpoint(appId) + booksEndpoint + itemIdEndpoint(bookId),
+const deleteBook = (bookId) => http.delete(
+  `${appsEndpoint}${appIdEndpoint}${booksEndpoint}${itemIdEndpoint(bookId)}`,
 );
 
 const BookstoreService = {
