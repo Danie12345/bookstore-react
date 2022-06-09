@@ -64,7 +64,7 @@ const Book = (props) => {
         <div className="completion">
           <CircularProgressBar
             colorCircle="#e6e6e6"
-            colorSlice="#000"
+            colorSlice="#0290ff"
             number={false}
             percent={percentile}
             size={75}
