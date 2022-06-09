@@ -102,63 +102,6 @@
   align-items: center;
 }
 
-.circle-wrap {
-  width: 80px;
-  height: 80px;
-  background: white;
-  border-radius: 50%;
-  border: none;
-}
-
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 1s;
-  transform: rotate(135deg);
-}
-
-.mask .fill {
-  clip: rect(0, 75px, 150px, 0);
-  background-color: #227ded;
-}
-
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle-wrap .circle .mask {
-  clip: rect(0, 80px, 80px, 40px);
-}
-
-.circle-wrap .inside-circle {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background: white;
-  line-height: 120px;
-  text-align: center;
-  margin-top: 7.5px;
-  margin-left: 7.5px;
-  color: #379cf6;
-  position: absolute;
-  z-index: 100;
-  font-weight: 700;
-  font-size: 2em;
-}
-
-@keyframes fill {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(135deg);
-  }
-}
-
 .number {
   display: flex;
   flex-direction: column;
