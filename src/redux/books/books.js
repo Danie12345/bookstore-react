@@ -1,4 +1,5 @@
-import BookstoreService from '../../services/BookstoreService';
+/* eslint-disable import/extensions */
+import BookstoreService from '../../services/BookstoreService.js';
 
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
