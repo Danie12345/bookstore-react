@@ -1,7 +1,7 @@
 import http from '../http-common';
 
 import {
-  appsEndpoint, itemIdEndpoint, booksEndpoint,
+  appsEndpoint, booksEndpoint,
 } from '../modules/endpoints';
 
 import storage from '../modules/localStorage';
