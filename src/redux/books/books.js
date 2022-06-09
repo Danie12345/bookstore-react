@@ -2,6 +2,7 @@ import BookstoreDataService from '../../services/BookstoreService';
 
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const ADD_ALL_BOOKS = 'bookstore/books/ADD_ALL_BOOKS';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const defaultState = [];
 
@@ -13,8 +14,10 @@ export default function reducer(state = defaultState, action = {}) {
         ...state,
         action.payload,
       ];
+    case ADD_ALL_BOOKS:
+      return action.payload;
     case REMOVE_BOOK:
-      return state.filter((item) => item.id !== action.payload.id);
+      return state.filter((item) => item.item_id !== action.payload);
     default:
       return state;
   }
@@ -22,33 +25,19 @@ export default function reducer(state = defaultState, action = {}) {
 
 // Action Creators
 export const addBook = (obj) => async (dispatch) => {
-  try {
-    const res = await BookstoreDataService.createBook(obj);
-    dispatch({ type: ADD_BOOK, payload: obj });
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
-  }
+  await BookstoreDataService.createBook(obj);
+  dispatch({ type: ADD_BOOK, payload: obj });
 };
 
-export const removeBook = (obj) => async (dispatch) => {
-  try {
-    const res = await BookstoreDataService.deleteBook(obj.id);
-    dispatch({ type: REMOVE_BOOK, payload: obj });
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
-  }
+export const removeBook = (bookId) => async (dispatch) => {
+  dispatch({ type: REMOVE_BOOK, payload: bookId });
+  await BookstoreDataService.deleteBook(bookId);
 };
 
-export const getBooks = () => async (dispatch) => {
-  try {
-    const res = await BookstoreDataService.getBooks();
-    Object.keys(res.data).forEach((id) => {
-      dispatch({ type: ADD_BOOK, payload: { ...res.data[id], item_id: id } });
-    });
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
-  }
+export const getBooks = async (dispatch) => {
+  const res = await BookstoreDataService.getBooks();
+  const books = Object.keys(res.data).map((id) => (
+    { ...res.data[id][0], item_id: id }
+  ));
+  dispatch({ type: ADD_ALL_BOOKS, payload: books });
 };
