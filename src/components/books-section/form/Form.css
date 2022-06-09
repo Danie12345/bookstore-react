@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   gap: 1.0625rem;
+  transition: ease all .5s;
 }
 
 .formBookAdd > h3 {
@@ -14,6 +15,7 @@
   font-weight: bold;
   letter-spacing: -0.18px;
   color: #888;
+  transition: ease all .5s;
 }
 
 .inputs {
@@ -21,6 +23,7 @@
   flex-direction: row;
   gap: 2.125rem;
   height: 2.813rem;
+  transition: ease all .5s;
 }
 
 .formInput {
@@ -30,6 +33,7 @@
   padding: 0.813rem 1.063rem 0.813rem 1.063rem;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
+  transition: ease all .5s;
 }
 
 .formInput::placeholder {
@@ -44,8 +48,8 @@
 .addBookBtn {
   box-sizing: border-box;
   width: calc(1.25 * 13.142857142%);
+  padding: 0.813rem 0rem;
   height: 100%;
-  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
   border-radius: 3px;
   border: none;
   background-color: #0290ff;
@@ -55,4 +59,29 @@
   font-weight: bold;
   letter-spacing: 0.5px;
   text-align: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .formBookAdd {
+    align-items: center;
+    height: auto;
+  }
+
+  .inputs {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .formInput {
+    width: 100%;
+  }
+
+  .addBookBtn {
+    width: auto;
+  }
 }
