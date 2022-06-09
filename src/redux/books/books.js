@@ -40,3 +40,15 @@ export const removeBook = (obj) => async (dispatch) => {
     return Promise.reject(err);
   }
 };
+
+export const getBooks = () => async (dispatch) => {
+  try {
+    const res = await BookstoreDataService.getBooks();
+    Object.keys(res.data).forEach((id) => {
+      dispatch({ type: ADD_BOOK, payload: { ...res.data[id], item_id: id } });
+    });
+    return Promise.resolve(res.data);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
