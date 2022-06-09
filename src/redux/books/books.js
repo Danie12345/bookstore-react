@@ -1,4 +1,4 @@
-import BookstoreDataService from '../../services/BookstoreService';
+import BookstoreService from '../../services/BookstoreService';
 
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
@@ -25,17 +25,17 @@ export default function reducer(state = defaultState, action = {}) {
 
 // Action Creators
 export const addBook = (obj) => async (dispatch) => {
-  await BookstoreDataService.createBook(obj);
+  await BookstoreService.createBook(obj);
   dispatch({ type: ADD_BOOK, payload: obj });
 };
 
 export const removeBook = (bookId) => async (dispatch) => {
   dispatch({ type: REMOVE_BOOK, payload: bookId });
-  await BookstoreDataService.deleteBook(bookId);
+  await BookstoreService.deleteBook(bookId);
 };
 
 export const getBooks = async (dispatch) => {
-  const res = await BookstoreDataService.getBooks();
+  const res = await BookstoreService.getBooks();
   const books = Object.keys(res.data).map((id) => (
     { ...res.data[id][0], item_id: id }
   ));
