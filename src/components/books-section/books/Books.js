@@ -11,7 +11,7 @@ const Books = () => {
   const books = useSelector((state) => state.book);
 
   useEffect(() => {
-    dispatch(getBooks());
+    dispatch(getBooks);
   }, [dispatch]);
 
   return (
@@ -21,9 +21,9 @@ const Books = () => {
           <li className="bookItem" key={book.item_id}>
             <Book
               id={book.item_id}
-              author={book[0].author}
-              title={book[0].title}
-              category={book[0].category}
+              author={book.author}
+              title={book.title}
+              category={book.category}
             />
           </li>
         ))}
