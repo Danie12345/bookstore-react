@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 import './Book.css';
+import { CircularProgressBar } from '@tomik23/react-circular-progress-bar';
 import { removeBook } from '../../../../redux/books/books';
 
 const Book = (props) => {
@@ -60,17 +61,13 @@ const Book = (props) => {
       </div>
       <div className="bookProgress">
         <div className="completion">
-          <div className="circle-wrap">
-            <div className="circle">
-              <div className="mask full">
-                <div className="fill" />
-              </div>
-              <div className="mask half">
-                <div className="fill" />
-              </div>
-              <div className="inside-circle" />
-            </div>
-          </div>
+          <CircularProgressBar
+            colorCircle="#e6e6e6"
+            colorSlice="#000"
+            number={false}
+            percent={75}
+            size={75}
+          />
           <div className="number">
             <div className="percentage">
               <span>{Math.round(Math.random() * 100)}</span>
