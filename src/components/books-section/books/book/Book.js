@@ -12,6 +12,7 @@ const Book = (props) => {
   const {
     id, author, title, category,
   } = props;
+  const percentile = Math.round(Math.random() * 100);
   const links = [
     {
       id: 1,
@@ -65,12 +66,12 @@ const Book = (props) => {
             colorCircle="#e6e6e6"
             colorSlice="#000"
             number={false}
-            percent={75}
+            percent={percentile}
             size={75}
           />
           <div className="number">
             <div className="percentage">
-              <span>{Math.round(Math.random() * 100)}</span>
+              <span>{percentile}</span>
               <span>%</span>
             </div>
             <small className="completed">Completed</small>
