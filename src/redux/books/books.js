@@ -1,4 +1,4 @@
-import '../../services/BookstoreService';
+import BookstoreService from '../../services/BookstoreService';
 
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
