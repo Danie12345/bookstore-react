@@ -15,7 +15,7 @@ const createBook = (data) => http.post(`${appsEndpoint}/${storage.appId}${booksE
 const getBooks = () => http.get(`${appsEndpoint}/${storage.appId}${booksEndpoint}`);
 
 const deleteBook = (bookId) => http.delete(
-  `${appsEndpoint}/${storage.appId}${booksEndpoint}${itemIdEndpoint(bookId)}`,
+  `${appsEndpoint}/${storage.appId}${booksEndpoint}/${bookId}`,
 );
 
 const BookstoreService = {
